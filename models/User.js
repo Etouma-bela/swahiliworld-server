@@ -6,9 +6,11 @@ const userSchema = new Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
   role: { type: String, enum: ["admin", "user"], default: "user" },
+  country: String,
   profilePic: {
     type: String,
-    default: "",
+    default:
+      "https://www.pinclipart.com/picdir/big/135-1352861_transparent-women-african-american-african-american-girl-cartoon.png",
   },
 });
 

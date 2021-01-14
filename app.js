@@ -42,9 +42,14 @@ app.use(function (req, res, next) {
  * Routes
  */
 
+// const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
+const videoRouter = require("./routes/video");
+const userAccountRouter = require("./routes/userAccount");
 
 app.use("/api/auth", authRouter);
+app.use("/api/video", videoRouter);
+app.use("/api/users", userAccountRouter);
 
 // 404 Middleware
 app.use((req, res, next) => {

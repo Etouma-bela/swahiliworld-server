@@ -19,12 +19,11 @@ const videoSchema = new Schema(
       type: String,
       require: true,
     },
-    likes: [{ type: Schema.Types.ObjectId, ref: "Like" }],
-
     category: {
       type: String,
       enum: ["song", "tales", "education"],
     },
+    likes: [{ type: Schema.Types.ObjectId, ref: "Like" }],
   },
   { timestamps: true }
 );
