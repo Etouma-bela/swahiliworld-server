@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const videos = [
   {
     title: "Baby Shark (Swahili)",
-    videoUrl: "https://www.youtube.com/watch?v=2sDUn4KIq6Y",
+    videoUrl: "https://www.youtube.com/embed/2sDUn4KIq6Y",
     description: "Dance to the peppy and groovy music of Baby Shark in Swahili",
     vocabulary: "Kiswahili: The swahili language, Papa: Shark",
     category: "song",
@@ -14,7 +14,7 @@ const videos = [
   },
   {
     title: "Akili and Me",
-    videoUrl: "https://www.youtube.com/watch?v=DjmLoxkeMPg",
+    videoUrl: "https://www.youtube.com/embed/DjmLoxkeMPg",
     description:
       "Learn Swahili and English with Akili and Me. Bilingual Learning for Preschoolers",
     vocabulary: "Yai: Egg, Samaki: Fish",
@@ -23,7 +23,7 @@ const videos = [
   },
   {
     title: "Mrukaji",
-    videoUrl: "https://www.youtube.com/watch?v=Z9MVwspsq2o",
+    videoUrl: "https://www.youtube.com/embed/Z9MVwspsq2o",
     description: "Idhaa ya Hadithi za Kiswahili",
     vocabulary: "Mnyama: Animal, Wazo: Idea",
     category: "tales",
