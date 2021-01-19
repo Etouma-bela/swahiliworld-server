@@ -2,14 +2,25 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const VideoModel = require("../models/Video");
-const upload = require("../config/cloudinary");
+const uploader = require("../config/cloudinary");
 const requireAuth = require("../middlewares/requireAuth");
+
+//MES VIDEOS LIKED SE METTENT SUR MA PAGE DE PROFILE
+router.get("/myvideos", (req, res, next) => {
+  VideoModel.find({ id_user: req.session.currentUser })
+    .then((videoDocuments) => {
+      res.status(200).json(videoDocuments);
+    })
+    .catch((error) => {
+      next(error);
+    });
+});
 
 // A USER CAN UPDATE HIS ACCOUNT, ADD A PICTURE FOR EXAMPLE
 router.patch(
   "/me",
   requireAuth,
-  upload.single("profilePic"),
+  uploader.single("profilePic"),
   (req, res, next) => {
     const userId = req.session.currentUser;
 
