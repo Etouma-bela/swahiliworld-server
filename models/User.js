@@ -12,6 +12,7 @@ const userSchema = new Schema({
     default:
       "https://www.pinclipart.com/picdir/big/135-1352861_transparent-women-african-american-african-american-girl-cartoon.png",
   },
+  favoriteVideos: [{ type: Schema.Types.ObjectId, ref: "Video", unique: true }],
 });
 
 const User = mongoose.model("User", userSchema);
