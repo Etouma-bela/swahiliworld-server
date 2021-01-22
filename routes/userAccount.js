@@ -8,7 +8,7 @@ const requireAuth = require("../middlewares/requireAuth");
 //MES VIDEOS LIKED SE METTENT SUR MA PAGE DE PROFILE
 router.get("/myvideos", (req, res, next) => {
   console.log("USER GET", req.session.currentUser);
-  User.find({ _id: req.session.currentUser })
+  User.findById(req.session.currentUser)
     .populate("favoriteVideos")
     .then((videoDocuments) => {
       console.log(videoDocuments);
